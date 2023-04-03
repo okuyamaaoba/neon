@@ -17,12 +17,19 @@ header{
 	margin-bottom: 170px;
   font-family:monospace;
   z-index: 1;
-
-  /* margin_bottom: 40px;
+  border-bottom: solid 2px #FFD300;
+  box-shadow: 0 20px 50px #ffffe0;  /* margin_bottom: 40px;
   font-family: 'Neon Glow'; */
 }
+header img {
+  position: fixed;
+  top: 15px;
+  left: 10px;
+}
 header nav{
-  margin: 0 0 0 auto;
+  position: fixed;
+  top: 15px;
+  right: 10px;
 
 }
 a {

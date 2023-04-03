@@ -6,16 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/css/fixed.css">
 <link rel="stylesheet" href="/css/style.css">
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+  <!-- <div class="icon">
+    <i class="fa fa-glass-martini-alt neon_icon"></i>
+  </div> -->
   @include('header')
   <section class="lead-body">
     <div class="lead-wrapper">
       <h1>神戸１映える！<br>シーシャ＆アミューズメントBAR</h1>
 
-          <!-- <div class=""></div> -->
       <div class="image-wrapper">
         <h2>＃カラオケ付きVIPルーム </br>
             ＃女子会/二次会/誕生日貸切パーティー予約OK</br>
@@ -26,7 +29,9 @@
           シーシャだけ吸いたい…  カジノだけ遊びたい…  両方してみたい… お酒だけ飲みたい…など</br>
 
           カラオケ付きVIPルーム・テーブルゲームでも遊べる神戸最大のアミューズメントBAR</p>
-      </div>
+
+        </div>
+
     </div>
   </section>
 

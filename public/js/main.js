@@ -1,3 +1,25 @@
+// function ornerSign(){
+//   console.log('ok');
+//     var err = [];
+//     if((orner.mail.value) == '' ){
+//       err.push('・メールアドレスは必須入力です');
+//     }
+//     // else if((orner.mail.value) !== 'orner@gmail.com'){
+//     //   err.push('・メールアドレスが違います');
+//     // }
+//     //パスワード
+//     if((orner.password.value) == '' ){
+//       err.push('・パスワードは必須入力です。');
+//     }
+//     // else if((orner.password.value) !== '0326neon'){
+//     //     err.push('・パスワードが一致しません');
+//     // }
+//     // エラー文は改行して表示する
+//     if( err.length >= 1){
+//       alert(err.join("\n"));
+//     }
+// };
+
 // 新規登録画面
 function formCheck(){
     var err = [];
@@ -105,40 +127,40 @@ function getPoint(){
     }
 };
 
-// $(function() {
-// var holidays = [
-// '2023-03-31',
-// //必要な分だけ休みにしたい日付を追加
-// ];
+// function orner(){
+//   console.log('ok');
+//     var err = [];
+//     // メールアドレス
+//     if((orner.mail.value) == '' ){
+//       err.push('・メールアドレスは必須入力です');
+//     }else if((orner.mail.value).match(/^[a-zA-Z0-9_+-]+(.[a-zA-Z0-9_+-]+)*@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/) == null){
+//       err.push('・有効なメールアドレスを入力してください');
+//     }
 //
-// $('#date').datepicker({
-//   changeMonth: true,
-//   // beforeShowDay: function (date) {
-//   //               if (holidays.indexOf(holidays) !== 1) {
-//   //                   return [false, ''];
-//   //               }
-//   //               // それ以外
-//   //               return [true, ''];
-//   //           },
-//           });
+//     //パスワード
+//     if((orner.password.value) == '' ){
+//       err.push('・パスワードは必須入力です。');
+//     }
+//     else if((orner.password.value) != (orner.password.value)){
+//         err.push('・パスワードが一致しません');
+//     }
+//     // エラー文は改行して表示する
+//     if( err.length >= 1){
+//       alert(err.join("\n"));
+//     }
+//
+// };
 
-//
+
+
 
 
 // var disableDates = array;
 
 $(function() {
-// $(function(){
-//   $(“#datepicker”).datepicker();
-//    $(“#datepicker”).datepicker(‘option’,
-//      ’beforeShowDay’,
-//
-//   function(date){
-//      var ret = [(date.getDay() != 0 && date.getDay() != 6)];
-//       return ret;
-//
+
 //ここにOpening->dateを格納したい
-// var disableDates = ['2015/01/01', '2015/01/03']; // ここがミソ
+// var disableDates = ['2015/01/01', '2015/01/03'];
 $("#date").datepicker({
     dateFormat: 'yy-mm-dd',
     minDate: '0',

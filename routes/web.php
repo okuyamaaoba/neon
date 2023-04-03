@@ -49,7 +49,7 @@ Route::get('orner/', [UserController::class, 'getIndex']);
 Route::get('/orner', [UserController::class, 'orner'])->name('orner');
 Route::post('orner/show', [UserController::class, 'show']);
 Route::post('orner/reserve_serch', [UserController::class, 'reserve_serch']);
-
+// Route::get('/ornerSignIn', [UserController::class, 'ornerSignIn'])->name('ornerSignIn');
 // Route::post('orner/add', [UserController::class, 'add']);
 
 

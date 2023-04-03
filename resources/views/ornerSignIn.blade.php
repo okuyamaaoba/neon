@@ -5,7 +5,7 @@
 <title>シーシャ＆カジノBar Neon【神戸三ノ宮店】</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/css/fixed.css">
-<!-- <link rel="stylesheet" href="/css/style.css"> -->
+<link rel="stylesheet" href="/css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
@@ -14,7 +14,7 @@
               <div class="input_form">
                   <h2>　ログインしてください　</h2>
                   <div class="wrapper">
-                    <form action="">
+                    <form action="{{ route('orner') }}" method="post" name="orner">
 
                           @csrf
                           <p>管理者ID</p>
@@ -31,11 +31,14 @@
                           <input type="password" class="input_field" placeholder="パスワード" name="password"
                           id="password" value="{{ old('password', session('inputs.password')) }}">
 
+                          <button type="submit" class="send" name="submit" id="submit" onclick="return ornerSign()">予約確認へ</button>
 
-                          <button type="submit" class="send" name="submit" id="submit"><a href="{{ route('reserveList') }}">管理者ページへ</a></button>
+                          <button type="submit" class="send" name="submit" id="orner" onclick="return orner()">管理者ページへ</button>
                       </form>
+                      <script src="js/main.js"></script>
                     </div>
               </div>
           </section>
+
   </body>
 </html>

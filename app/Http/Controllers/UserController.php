@@ -7,7 +7,7 @@ use App\Http\Requests\SignupRequest;
 use App\Http\Requests\SigninRequest;
 use App\Http\Requests\pwResetRequest;
 use App\Http\Requests\pwUpdateRequest;
-
+// use App\Http\Requests\OrnerRequest;
 
 use App\Models\Contact;
 use App\Models\User;
@@ -397,42 +397,14 @@ class UserController extends Controller
          }
 
 
-//管理者ページ系
+//管理者ページ
 
-
-    public function ornerSignIn(){
-        return view('ornerSignIn');
+    public function orner(){
+        return view('orner');
     }
+
+    //   public function orner(OrnerRequest $request){
     //
-    // public function reserveList(){
-    //   //予約者取得
-    //   // $contacts = Contact::all();
-    //   //     foreach ($contacts as $contact){
-    //   //       $reserves = array();
-    //   //     }
-    //   //営業不可日取得
-    //   // $openings = Opening::all();
-    //   // $reservedates = array();
-    //   //     foreach ($openings as $opening){
-    //   //       array_push($reservedates, $opening->date);
-    //   //     }
-    //   return view('reserveList');
+    //         return view('orner');
     // }
-
-    // openings の　dateの値を全取得したい
-      public function orner(){
-        $contacts = Contact::all();
-        //$reservedateの配列の箱を作ってあげてその中に格納していく
-        $reservedate = array();
-            foreach ($contacts as $contact){
-              array_push($reservedate, $contact->date);
-            }
-        return view('orner',compact('reservedate'));
-        }
-
-   public function signComplete(){
-       return view('signComplete');
-        }
-
-
 }

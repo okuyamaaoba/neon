@@ -56,17 +56,15 @@
             @csrf
             <div id="result1" name="name"></div>
             <input type="hidden" name="id" id="result2">
-            <input type="text" class="input_field" placeholder="ポイント数を入力" name="get_point"
+            <input type="text" class="get_point" placeholder="ポイント数を入力" name="get_point"
             id="getpoint">
 
             <button type="submit" class="get" name="action" onclick="return getPoint()">ポイント付与！</button>
           </form>
 
         </div>
-
  </div>
-
- <a  class="border" href="{{ route('top') }}"> Neonホームページへ </a>
+ <a class="border back" href="{{ route('top') }}"> Neonホームページへ </a>
 </div>
 </section>
 
