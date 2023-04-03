@@ -1,0 +1,136 @@
+@charset "UTF-8";
+ul {
+  list-style:none;
+}
+body{
+  width: 100% !important;
+
+}
+header{
+  background-color: black;
+  color: white;
+  position: fixed;
+	top: 0;
+	left: 0;
+  width: 100%;
+  height: 120px;
+	margin-bottom: 170px;
+  font-family:monospace;
+  z-index: 1;
+
+  /* margin_bottom: 40px;
+  font-family: 'Neon Glow'; */
+}
+header nav{
+  margin: 0 0 0 auto;
+
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.header_wrapper {
+  display: flex;
+  align-items: right;
+
+}
+
+.header_wrapper img {
+  width: 180px;
+}
+
+.header_wrapper ul {
+  display: flex;
+
+}
+.header_wrapper li {
+  margin: 30px;
+  font-size: 1.3rem;
+}
+.symbol1 {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #FF0099,
+    0 0 21px #FF0099,
+    0 0 42px #FF0099,
+    0 0 82px #FF0099,
+    0 0 92px #FF0099,
+    0 0 102px #FF0099,
+    0 0 250px #FF0099,
+    0 0 380px #FF0099;
+  }
+  .symbol1:hover,
+  .symbol2:hover,
+  .symbol3:hover{
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #FFD700,
+      0 0 21px #FFD700,
+      0 0 42px #FFD700,
+      0 0 82px #FFD700,
+      0 0 92px #FFD700,
+      0 0 102px #FFD700,
+      0 0 250px #FFD700,
+      0 0 380px #FFD700;
+    }
+.symbol2 {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #00FFFF,
+    0 0 21px #00FFFF,
+    0 0 42px #00FFFF,
+    0 0 82px #00FFFF,
+    0 0 92px #00FFFF,
+    0 0 102px #00FFFF,
+    0 0 250px #00FFFF,
+    0 0 380px #00FFFF;
+  }
+
+  .symbol3 {
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #00FF33,
+      0 0 21px #00FF33,
+      0 0 42px #00FF33,
+      0 0 82px #00FF33,
+      0 0 92px #00FF33,
+      0 0 102px #00FF33,
+      0 0 250px #00FF33,
+      0 0 380px #00FF33;
+    }
+
+
+footer {
+  background-color: black;
+  color: #C0C0C0;
+  width: 100%;
+  font-family:monospace;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-family: monospace;
+
+}
+.footer-title{
+  font-weight: bolder;
+}
+.footer_wrapper{
+  display: flex;
+}
+.footer-body{
+  width: 50%;
+}
+iframe{
+  padding: 20px;
+  float: right;
+  margin-right: 80px;
+}
+.info{
+  display: row;
+  margin: 0 auto;
+  padding-top: 20px;
+}
