@@ -40,29 +40,24 @@ MAMP/MySQL/Laravel/PHP
 
 - Contactsテーブル
 
-・id(AI) ・kana　　・mail　　・date　　・time　　・people　　・menu
+
+id(AI)/kana/mail/date/time/people/menu
 
 - Usersテーブル
 
-・id　　・kana　　・mail　　・user_id　　・member_code
+id(AI)/kana/mail/user_id/member_code
+
 
 - Menusテーブル
 
-・id ・menu_id ・menu
+id(AI)/menu_id/menu
+
 
 - Timesテーブル
 
-・id ・time_id ・hour
+id(AI)/time_id/hour
 
 - Recordsテーブル
 
-・id　　・user_id　　・get_points
+id(AI)/user_id/get_point
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# neon
-# neon
-# neon
-# git_neon
-# neon
