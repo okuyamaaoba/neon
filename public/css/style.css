@@ -455,7 +455,9 @@ form h3{
       border: 1px solid #FFF !important;
       outline: 0;
 }
-
+.pwreset{
+  width: 200px;
+}
 .error-msg,
 span {
     color: #D93A49;

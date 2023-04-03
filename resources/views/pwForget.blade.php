@@ -34,7 +34,7 @@
                   <input type="text" class="input_field" name="birth"
                   id="birth" value="{{ old('birth', session('inputs.birth')) }}">
 
-                  <button type="submit" class="send" name="submit">パスワードリセット画面へ</button>
+                  <button type="submit" class="send pwreset" name="submit">パスワードリセット画面へ</button>
                 </form>
             </div>
 

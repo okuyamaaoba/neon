@@ -23,8 +23,8 @@
                   @error('password1')
                     <p class="error-msg">{{ $errors->first('password1') }}</p>
                   @enderror
-                  <input type="password" class="input_field" name="password1"　id="password1"
-                  value="{{ old('password1', session('inputs.password1')) }}">
+                  <input type="password" class="input_field" name="password1"
+                  id="password1" value="{{ old('password1', session('inputs.password1')) }}">
 
                   <p>パスワード(確認用)<span>*</span></p>
                   @error('password')

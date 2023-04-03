@@ -36,7 +36,7 @@
 
                   <button type="submit" class="send" name="signin" onclick="return membership()">会員ページへ</button>
 
-                  <button type="submit" class="send" name="signin" formaction="{{ route('contact_sign') }}">サインインして予約</button>
+                  <button type="submit" class="send pwreset" name="signin" formaction="{{ route('contact_sign') }}">サインインして予約</button>
               </form>
             </div>
       <div class="other">

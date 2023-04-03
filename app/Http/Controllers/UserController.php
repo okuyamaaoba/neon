@@ -93,13 +93,6 @@ class UserController extends Controller
        $mail = $request->mail;
        $user = User::where('mail','=',$mail)->first();
 
-       // $date = $_POST['date'];
-       // $opening = new Opening();
-       // $opening->date = $date;
-       // $opening->flg = '1';
-       // $opening->timestamps = false;
-       // $opening->save();
-
        return view('confirm_M', compact('inputs','user'));
      }
 
@@ -107,7 +100,7 @@ class UserController extends Controller
      public function send_M(MembercontactRequest $request){
        $action = $request->input('action');
        $inputs = $request->except('action', '_token');
-
+       $password = $request->password;
        $mail = $request->mail;
        $user = User::where('mail','=',$mail)->first();
 
@@ -122,7 +115,7 @@ class UserController extends Controller
          $contact->timestamps = false;
          $contact->save();
 
-         return view('complete_M',compact('mail'));
+         return view('complete_M',compact('mail','password'));
       }
 
 
