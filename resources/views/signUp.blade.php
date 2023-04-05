@@ -64,8 +64,8 @@ $member_code = substr(
 
               <input type="hidden" name="member_code" id="member_code" value="{{ $member_code }}">
 
-              <div class="buttons">
-                <button type="submit" class="send" name="action" id="submit" onclick="return formCheck()">新規登録</button>
+              <div class="btn_wrapper">
+                <button type="submit" class="btn" name="action" id="submit" onclick="return formCheck()">新規登録</button>
               </div>
             </form>
             <script src="/js/main.js"></script>

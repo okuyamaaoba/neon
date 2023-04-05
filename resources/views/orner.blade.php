@@ -47,19 +47,28 @@
                  <input type="text" name="id_number" id="id_number">
               </div>
               <div>
-              <button type="button" id="ajax_show" class="btn styled">検索</button>
+                  <button type="button" id="ajax_show" class="btn styled">検索</button>
               </div>
         </div>
 
-        <div class="result_wrapper">
+        <div class="reserch-wrapper">
           <form method="post" action="{{ route('getPoint') }}" name="point">
             @csrf
-            <div id="result1" name="name"></div>
-            <input type="hidden" name="id" id="result2">
-            <input type="text" class="get_point" placeholder="ポイント数を入力" name="get_point"
-            id="getpoint">
+            <div class="point-wrapper">
 
-            <button type="submit" class="get" name="action" onclick="return getPoint()">ポイント付与！</button>
+              <div id="result1" name="name" class="result_name"></div>
+              <input type="hidden" name="id" id="result2">
+            </div>
+
+                <div class="under_serch">
+                   <div>
+                    <input type="text" placeholder="ポイント数を入力" name="get_point"
+                      id="getpoint">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn styled red" name="action" onclick="return getPoint()">ポイント付与！</button>
+                    </div>
+                </div>
           </form>
 
         </div>

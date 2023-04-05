@@ -73,14 +73,16 @@ a {
     color: #fff;
     text-shadow:
       0 0 7px #fff,
-      0 0 10px #FFD700,
-      0 0 21px #FFD700,
-      0 0 42px #FFD700,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 38px #FFD700,
       0 0 82px #FFD700,
       0 0 92px #FFD700,
       0 0 102px #FFD700,
       0 0 250px #FFD700,
-      0 0 380px #FFD700;
+      0 0 380px #FFD700,
+      0 0 500px #FFD700;
+
     }
 .symbol2 {
   color: #fff;

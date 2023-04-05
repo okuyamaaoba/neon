@@ -18,7 +18,7 @@ class SignupRequest extends FormRequest
       'mail'      => 'required | email | unique:users',
       'birth'      => 'required | date',
       'password1'      => 'required ',
-      'password'      => 'required| same:password1'
+      'password'      => 'required | same:password1'
 
     ];
   }

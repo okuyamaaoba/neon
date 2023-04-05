@@ -22,8 +22,9 @@
                   <p>ご予約ありがとうございます。</p>
                   <input type="hidden" value="{{ $mail }}" name="mail" id="mail">
                   <input type="hidden" value="{{ $password }}" name="password" id="password">
-
-                  <button type="submit" class="send" name="submit">会員ページへ</button>
+                  <div class="btn_wrapper">
+                    <button type="submit" class="btn" name="submit">会員ページへ</button>
+                  </div>
                   </div>
               </form>
           </div>

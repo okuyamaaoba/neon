@@ -24,6 +24,34 @@
             <h4>会員コード</h4>
             <p>{{ $user->member_code }}</p>
           </li>
+          <li class="reserve_member">
+            <h4>予約情報</h4>
+
+            @if($contact !== null)
+            <form method="post">
+              @csrf
+              <h5>日付：{{ $contact->date }}</h5>
+              <input type="hidden" value="{{ $contact->date }}" name="kana">
+
+              <h5>時間：{{ $contact->time }}</h5>
+              <input type="hidden" value="{{ $contact->time }}" name="time">
+
+              <h5>人数：{{ $contact->people }}</h5>
+              <input type="hidden" value="{{ $contact->people }}" name="people">
+
+              <h5>メニュー：</br>{{ $contact->menu }}</h5>
+              <input type="hidden" value="{{ $contact->menu }}" name="menu">
+
+              <input type="hidden" value="{{ $user->mail }}" name="mail">
+
+
+              <button type="submit" class="reserve_info" formaction="{{ route('reserveEdit') }}" >予約変更</button>
+              <button type="submit" class="reserve_info" formaction="{{ route('delete') }}" onclick="return confirm('予約をキャンセルしますか？')">予約キャンセル</button>
+            </form>
+            @elseif($contact == null)
+            <p>予約なし</p>
+        @endif
+          </li>
         </section>
 
         <section class="member_data">
@@ -50,18 +78,19 @@
 
               <!-- <input type="hidden" value="{{ $total_point }}" name="password"> -->
 
-                 <div class="buttons">
-                     <button type="submit" class="send" formaction="{{ route('memberEdit') }}" >編集する</button>
-                     <button type="submit" class="send" formaction="{{ route('contact_M') }}" >予約する</button>
+                 <div class="btn_wrapper">
+                     <button type="submit" class="btn" formaction="{{ route('memberEdit') }}" >編集する</button>
+                     <button type="submit" class="btn" formaction="{{ route('contact_M') }}" >予約する</button>
                  </div>
               </form>
+
+
               <div class="complete-other logout">
-                <p><a class="border" href="{{ route('top') }}">ログアウトしてTOPへ</a></p>
+                <a class="border back" href="{{ route('top') }}"> ログアウトしてTOPへ </a>
               </div>
-            </section>
-
             </div>
-
+            <script src="/js/main.js"></script>
+          </section>
 
 
   </body>

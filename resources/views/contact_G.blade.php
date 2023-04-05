@@ -36,22 +36,23 @@
                       <p class="error-msg">{{ $errors->first('kana') }}</p>
                     @enderror
                     <input type="text" class="input_field" placeholder="ヤマダタロウ" name="kana"
-                    id="kana" value="{{ old('kana', session('inputs.kana')) }}">
+                    id="kana" value="{{ old('kana', session('inputs.kana')) }}" autocomplete="off">
 
                     <p>メールアドレス<span>*</span></p>
                     @error('mail')
                       <p class="error-msg">{{ $errors->first('mail') }}</p>
                     @enderror
                     <input type="text" class="input_field" placeholder="test@test.co.jp" name="mail"
-                    id="mail" value="{{ old('mail', session('inputs.mail')) }}">
+                    id="mail" value="{{ old('mail', session('inputs.mail')) }}" autocomplete="off">
 
                     <p>日時<span>*</span></p>
-
-                    <input id="date" name="date" value="{{ old('date', session('inputs.date')) }}">
-
                     @error('date')
                       <p class="error-msg">{{ $errors->first('date') }}</p>
                     @enderror
+
+                    <input id="date" name="date"  class="input_field" value="{{ old('date', session('inputs.date')) }}"　autocomplete="off">
+
+
 
                     <p>時間<span>*</span></p>
                     @error('time')
@@ -59,7 +60,7 @@
                     @enderror
 
 
-                    <select name="time" id="time">
+                    <select name="time" id="time" class="input_field">
                     @foreach ($times as $time)
                       echo '<option value="{{ $time->hour }}">{{ $time->hour }}</option>';
                     @endforeach
@@ -71,7 +72,7 @@
                       <p class="error-msg">{{ $errors->first('people') }}</p>
                     @enderror
 
-                    <select name="people" id="people">
+                    <select name="people" id="people" class="input_field">
                       <option value="未定">未定</option>
                       <option value="1人">1人</option>
                       <option value="2人">2人</option>
@@ -92,16 +93,15 @@
                     @enderror
 
 
-                    <select name="menu" id="menu">
+                    <select name="menu" id="menu" class="input_field">
                     @foreach ($menus as $menu)
                       echo '<option value="{{ $menu->menu }}">{{ $menu->menu }}</option>';
                     @endforeach
                     </select>
-
-                    <div class="buttons">
-                        <button type="submit" class="send" name="submit" id="submit" onclick="return contactCheck()">予約確認へ</button>
+                    <div class="btn_wrapper">
+                      <button type="submit" class="btn" name="submit" id="submit" onclick="return contactCheck()">予約確認へ</button>
                     </div>
-                </form>
+
                 <script src="/js/main.js"></script>
 
           </div>

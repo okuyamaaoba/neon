@@ -43,6 +43,10 @@ Route::get('/signIn', [UserController::class, 'signIn'])->name('signIn');
 Route::post('/membership', [UserController::class, 'membership'])->name('membership');
 Route::post('/memberEdit', [UserController::class, 'memberEdit'])->name('memberEdit');
 Route::post('/memberUpdate', [UserController::class, 'memberUpdate'])->name('memberUpdate');
+Route::post('/reserveEdit', [UserController::class, 'reserveEdit'])->name('reserveEdit');
+
+Route::post('/reseveChange', [UserController::class, 'reseveChange'])->name('reseveChange');
+Route::post('/delete', [UserController::class, 'delete'])->name('delete');
 
 //管理者画面
 Route::get('orner/', [UserController::class, 'getIndex']);
@@ -57,6 +61,8 @@ Route::post('orner/reserve_serch', [UserController::class, 'reserve_serch']);
 Route::get('/pwForget', [UserController::class, 'pwForget'])->name('pwForget');
 Route::post('/pwReset', [UserController::class, 'pwReset'])->name('pwReset');
 Route::post('/pwUpdate', [UserController::class, 'pwUpdate'])->name('pwUpdate');
+Route::post('/backMembership', [UserController::class, 'backMembership'])->name('backMembership');
+
 
 //管理者管理画面
 Route::get('/reserveList', [UserController::class, 'reserveList'])->name('reserveList');

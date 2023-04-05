@@ -15,7 +15,7 @@ class ContactRequest extends FormRequest
   public function rules(){
     return [
       'kana'      => 'required | max:10',
-      'mail'      => 'required | email',
+      'mail'      => 'required | email | unique:users',
       'date'      => 'required',
       'time'      => 'required',
       'people'      => 'required',

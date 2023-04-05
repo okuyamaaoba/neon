@@ -23,11 +23,13 @@
                       <input type="hidden" value="{{ $password }}" name="password" id="password">
                       <input type="hidden" name="total_point" id="total_point">
 
-                    <button type="submit" class="send" name="submit">会員ページへ</button>
-                  </form>
+                      <div class="btn_wrapper">
+                        <button type="submit" class="send" name="submit">会員ページへ</button>
+                      </div>
+                    </form>
                   </div>
                   <div class="complete-other">
-                    <a class="border" href="{{ route('top') }}">トップへ戻る</a>
+                    <a class="border back" href="{{ route('top') }}">トップへ戻る</a>
                   </div>
                 </div>
             </div>

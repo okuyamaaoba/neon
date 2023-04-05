@@ -14,10 +14,12 @@
       <h1>ADMIN　PAGE</h1>
     </div>
   </section>
-<section>
-  <h2>ポイント付与完了！</h2>
+  <section class="contact">
+  <div class="ajax">
 
-<a class="border" href="{{ route('orner') }}">管理者TOPへ戻る</a>
-</section>
+   </div>
+   <a class="border back" href="{{ route('orner') }}"> Neonホームページへ </a>
+  </div>
+  </section>
 </body>
 </html>

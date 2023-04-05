@@ -18,11 +18,11 @@
                 <div class="complete-wrapper">
 
                       <div class="complete-other">
-                        <a class="border" href="{{ route('top') }}">トップへ戻る</a>
+                        <a class="border back" href="{{ route('top') }}">トップへ戻る</a>
                       </div>
 
                       <div class="complete-other">
-                        <a  class="border" href="{{ route('signUp') }}">このまま会員登録へ</a>
+                        <a  class="border back" href="{{ route('signUp') }}">このまま会員登録へ</a>
                         <p>※お会計時にポイントがたまります</p>
                       </div>
 

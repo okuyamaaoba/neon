@@ -47,10 +47,10 @@
                         <p>{{ $inputs['menu'] }}</p>
                         <input name="menu" value="{{ $inputs['menu'] }}" type="hidden">
 
-                        <div class="buttons">
+                        <div class="btn_wrapper">
 
-                            <button type="submit" class="send" name="action">予約する</button>
-                            <button type="submit" class="send" name="action"><a href="{{ route('contact_G') }}">修正</a></button>
+                            <button type="submit" class="btn" name="action">予約する</button>
+                            <button type="submit" class="btn" name="action"><a href="{{ route('contact_G') }}">修正</a></button>
 
                         </div>
                       </form>

@@ -18,6 +18,11 @@
             <form action="{{ route('membership') }}" method="post" name="sign_form">
 
                   @csrf
+
+                  @if($signNG !== null)
+                    <p class="error-msg">メールアドレスまたはパスワードが誤っています</p>
+                  @endif
+
                   <p>メールアドレス</p>
                   @error('mail')
                     <p class="error-msg">{{ $errors->first('mail') }}</p>
@@ -29,23 +34,22 @@
                   @error('password')
                     <p class="error-msg">{{ $errors->first('password') }}</p>
                   @enderror
+
+
                   <input type="password" class="input_field" name="password"
                   id="password" value="{{ old('password', session('inputs.password')) }}">
 
                   <!-- <input type="hidden" class="total_point" name="total_point" value="0"> -->
-
-                  <button type="submit" class="send" name="signin" onclick="return membership()">会員ページへ</button>
-
-                  <button type="submit" class="send pwreset" name="signin" formaction="{{ route('contact_sign') }}">サインインして予約</button>
+                  <div class="btn_wrapper">
+                    <button type="submit" class="btn" name="signin" onclick="return membership()">会員ページへ</button>
+                  </div>
               </form>
+
             </div>
       <div class="other">
-        <li>
-          <a class="border" href="{{ route('pwForget') }}">パスワードをお忘れの方</a>
-        </li>
-        <li>
-          <a class="border" href="{{ route('signUp') }}">新規登録はこちら</a></p>
-        </li>
+          <a class="border back" href="{{ route('pwForget') }}">パスワードをお忘れの方</a>
+
+          <a class="border back" href="{{ route('signUp') }}">新規登録はこちら</a></p>
       </div>
   </section>
   @include('footer')

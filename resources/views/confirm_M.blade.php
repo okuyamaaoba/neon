@@ -24,7 +24,7 @@
                         <input type="hidden" value="{{ $user->kana }}" name="kana">
 
                         <input type="hidden" value="{{ $user->mail }}" name="mail">
-
+                        <input type="hidden" value="{{ $user->password }}" name="password">
 
 
                         <h3>日時</h3>
@@ -44,14 +44,12 @@
                         <input name="menu" value="{{ $inputs['menu'] }}"type="hidden">
 
 
-                        <div class="buttons">
-                            <button type="submit" class="send" name="action">予約する</button>
+                        <div class="btn_wrapper">
+                            <button type="submit" class="btn" name="action">予約する</button>
+                            <button type="submit" class="btn" name="action" formaction="{{ route('contact_M') }}">修正</a></button>
+
                         </div>
                       </form>
-
-                        <div class="buttons">
-                            <button type="submit" class="send" name="action" formaction="{{ route('contact_M') }}">修正</a></button>
-                        </div>
                 </div>
             </div>
     </section>

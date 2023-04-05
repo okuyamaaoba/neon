@@ -14,18 +14,16 @@ class pwUpdateRequest extends FormRequest
 
   public function rules(){
     return [
-      'mail'      => 'required',
       'password1'      => 'required ',
-      'password'      => 'required| same:password1'
+      'password'      => 'required'
 
     ];
   }
 
   public function attributes(){
     return [
-      'mail'       => '',
       'password1'       => 'パスワード',
-      'password'       => 'パスワード',
+      'password'       => 'パスワード'
 
     ];
   }

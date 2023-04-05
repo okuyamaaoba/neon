@@ -92,19 +92,37 @@ function membership(){
   if((sign_form.mail.value) == '' ){
     err.push('メールアドレスを入力してください');
   }
+  if((sign_form.password.value) == '' ){
+    err.push('パスワードを入力してください');
+  }
   if( err.length >= 1){
     alert(err.join("\n"));
   }
 };
 
-// 新規登録画面
 function pwReset(){
     var err = [];
     //パスワード
-    if((pw.password1.value) == '' ){
+    if((pwReset.mail.value) == '' ){
+      err.push('・登録したメールアドレスを入力してください');
+    }
+    if((pwReset.birth.value) == ''){
+        err.push('・登録した生年月日を入力してください');
+    }
+    // エラー文は改行して表示する
+    if( err.length >= 1){
+      alert(err.join("\n"));
+    }
+};
+
+// パスワード変更画面
+function pwChange(){
+    var err = [];
+    //パスワード
+    if((pwCh.password1.value) == '' ){
       err.push('・パスワードは必須入力です。');
     }
-    else if((pw.password1.value) != (pw.password.value)){
+    else if((pwCh.password1.value) != (pwCh.password.value)){
         err.push('・パスワードが一致しません');
     }
     // エラー文は改行して表示する
@@ -112,6 +130,8 @@ function pwReset(){
       alert(err.join("\n"));
     }
 };
+
+
 function getPoint(){
     var err = [];
     //パスワード

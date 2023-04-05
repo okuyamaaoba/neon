@@ -41,9 +41,9 @@
 
 
 
-                        <div class="buttons">
-                            <button type="submit" class="send" name="action">会員登録する</button>
-                            <button type="submit" class="send" name="action"><a href="{{ route('signUp') }}">修正</a></button>
+                        <div class="btn_wrapper">
+                            <button type="submit" class="btn" name="action">会員登録する</button>
+                            <button type="submit" class="btn" name="action"><a href="{{ route('signUp') }}">修正</a></button>
                         </div>
                       </form>
 

@@ -31,9 +31,9 @@
                           <input type="password" class="input_field" placeholder="パスワード" name="password"
                           id="password" value="{{ old('password', session('inputs.password')) }}">
 
-                          <button type="submit" class="send" name="submit" id="submit" onclick="return ornerSign()">予約確認へ</button>
-
-                          <button type="submit" class="send" name="submit" id="orner" onclick="return orner()">管理者ページへ</button>
+                          <div class="btn_wrapper">
+                            <button type="submit" class="btn" name="submit" id="orner" onclick="return orner()">管理者ページへ</button>
+                          </div>
                       </form>
                       <script src="js/main.js"></script>
                     </div>

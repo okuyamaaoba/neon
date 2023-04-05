@@ -16,7 +16,7 @@ class pwResetRequest extends FormRequest
   public function rules(){
     return [
       'mail'      => 'required | exists:users',
-      'birth'      => 'required | exists:users'
+      'birth'      => 'required '
 
     ];
   }

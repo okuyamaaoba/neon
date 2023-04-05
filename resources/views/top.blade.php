@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
 </head>
 <body>
   <!-- <div class="icon">
@@ -32,6 +34,17 @@
 
         </div>
 
+    </div>
+  </section>
+  <section class="photo-body">
+    <div>
+      <p>mozi<p>
+    </div>
+    <div class="slider">
+      <img src="img/slide1.jpg" alt="">
+      <img src="img/slide2.jpg" alt="">
+      <img src="img/slide3.jpg" alt="">
+      <img src="img/slide4.jpg" alt="">
     </div>
   </section>
 
@@ -82,9 +95,6 @@
             <li> 平日の火～木曜日はVIPルームのチャージ料金が半額！</li>
             <li> 完全個室でシーシャやカラオケを楽しみたい方や</li>
             <li> 誕生日のサプライズにおすすめです！</li>
-
-
-
     </div>
   </section>
 

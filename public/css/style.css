@@ -45,15 +45,11 @@ width: auto
 li {
     list-style: none;
 }
-.border{
+/* .border{
     border-bottom: 1px solid white;
     width: 200px;
-}
+} */
 
-.other{
-    padding-top: 50px;
-    font-size: 15px;
-}
 
 .lead-body {
     width: 100%;
@@ -168,8 +164,63 @@ select{
         box-shadow: none;
     }
 }
+.bx-controls{
+  display: none;
+}
+.photo-body{
+  padding-bottom: 40px;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.slider{
+  position   : relative;
+overflow   : hidden;
+                  /* 画像のサイズに合わせて変更ください */
+width      : 200px;
+height     : 200px;
+margin     : auto;      /* サンプルは中央寄せの背景：白 */
+background : #fff;
 
 
+}
+.slider img {
+  position: absolute;
+  width: 100%;
+  display    : block;
+                      /* 画像のサイズを表示エリアに合せる */
+  height     : inherit;
+  weight: inherit;
+  opacity    : 0;
+  animation  : slideAnime 12s ease infinite;
+}
+
+ /*=== スライドのアニメーションを段差で開始する ========= */
+.slider img:nth-of-type(1) { animation-delay: 0s }
+.slider img:nth-of-type(2) { animation-delay: 3s }
+.slider img:nth-of-type(3) { animation-delay: 6s }
+.slider img:nth-of-type(4) { animation-delay: 9s }
+
+ /*=== スライドのアニメーション ========================= */
+@keyframes slideAnime{
+  0% { opacity: 0 }
+  2% { opacity: 1 }
+ 23% { opacity: 1 }
+ 25% { opacity: 0 }
+100% { opacity: 0 }
+}
+/* .slider img{
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow:
+      0 0 .5rem #fff,
+      inset 0 0 .5rem #fff,
+      0 0 2rem var(--neon-border-color),
+      inset 0 0 2rem var(--neon-border-color),
+      0 0 4rem var(--neon-border-color),
+      inset 0 0 4rem var(--neon-border-color);
+
+} */
 .shisha-body {
     background-image: url(/img/shisha.jpg);
     background-position: center center;
@@ -204,18 +255,12 @@ select{
     margin: 0 !important;
     padding: 2px;
 }
-
-
 .shisha-wrapper h1,
 .casino-wrapper h1,
 .menu-wrapper h1{
   padding: 4px;
  font-size:23px;
 }
-
-
-
-
 .casino-body {
     background-image: url(/img/casino.jpg);
     background-position: center center;
@@ -239,15 +284,86 @@ select{
     text-shadow:
     0 0 7px black;
 }
-.meni-wrapper h1{
+.menu-wrapper h1{
   color: 	#CCFFFF;
 
 }
-button{
-  width: 40%;
+
+/* フォームCSS */
+.input_form {
+    width: 70%;
+    justify-content: center center;
+    margin: 0 auto;
+    padding: 50px;
+    margin-bottom: 50px;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #FF0099,
+    0 0 82px #FF0099 inset;
+    border-radius: 15px;
+}
+.input_form h2{
+    color: white;
+    text-align: center;
+    margin: 2em auto;
+    padding-bottom: 15px;
+    width: calc(100% - 2em);
+    border-bottom: 2px solid #fff;
+}
+
+/* ボタン系CSS */
+.buttons {
+    justify-content: center center;
+    display: flex ;
+    flex-direction: row;
+}
+.btn_wrapper{
+ display: flex;
+ padding-top: 30px;
+ width:100%;
+}
+.btn_wrapper button{
+  width: 30%;
+
+}
+.btn{
+  /* 青ボタンCSS */
+  margin: 0 auto;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+          margin-top: 30px;
+          width : 120px ;
+          height : 40px ;
+          font-size : 15px ;
+          border-radius : 12px ;
+          color: white;
+          background-color: inherit;
+          box-shadow :
+          0 0 7px #fff,
+          0 0 10px #fff,
+          0 0 16px #0062FF inset,
+          -0 -0 42px #0062FF,
+          -0 -0 82px #0062FF;
+}
+.btn:hover{
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 13px #0062FF inset,
+    0 0 21px #0062FF inset,
+    0 0 26px #5D99FF inset;
+    border: 1px solid #FFF !important;
+  }
+
+
+.pwreset{
+  width: 200px;
 }
 .send{
-  margin: 0 50px;
+  /* 青ボタンCSS */
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -275,7 +391,11 @@ button{
     border: 1px solid #FFF !important;
     outline: 0;
 }
+.reserve_info{
 
+}
+
+/* 検索画面 */
 .ajax{
     font-size: 15px;
     width: 80%;
@@ -284,36 +404,11 @@ button{
 .ajax .border{
     margin: 0 150px;
     font-size: 20px;
-
-}
-.input_form {
-    width: 70%;
-    justify-content: center center;
-    margin: 0 auto;
-    padding: 50px;
-    margin-bottom: 50px;
-    box-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px #FF0099,
-    0 0 82px #FF0099 inset;
-    border-radius: 15px;
-}
-.buttons {
-    justify-content: center center;
-    display: flex ;
-    flex-direction: row;
 }
 
-.input_form h2{
-    color: white;
-    text-align: center;
-    margin: 2em auto;
-    padding-bottom: 15px;
-    width: calc(100% - 2em);
-    border-bottom: 2px solid #fff;
-}
+
+
+/* 会員ページCSS */
 .member_top {
     display: flex;
     align-items: right;
@@ -321,10 +416,29 @@ button{
 .member_top li{
     margin: 20px;
 }
+.member_top{
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+}
+.member_top h2{
+  font-size: 20px;
+}
+.member_top h4{
+  font-size: 15px;
+}
+.member_top p{
+  font-size: 25px;
+  font-style: oblique;
+  margin: 0 auto;
+}
 
+.member_top h5{
+  font-size: 18px;
+  font-style: oblique;
+}
 .point{
-    margin: 10px 0;
-    padding: 50px;
     box-shadow:
     0 0 7px #fff,
     0 0 10px #fff,
@@ -332,12 +446,10 @@ button{
     0 0 42px #0062FF,
     0 0 82px #0062FF inset;
     border-radius: 15px;
-    padding: 30px;
+    padding: 40px;
 }
 
 .member_code{
-    margin: 10px 0;
-    padding: 50px;
     box-shadow:
     0 0 7px #fff,
     0 0 10px #fff,
@@ -346,6 +458,19 @@ button{
     0 0 82px #FF3300 inset;
     border-radius: 15px;
     padding: 40px;
+}
+.reserve_member{
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #39FF14,
+    0 0 82px #39FF14 inset;
+    border-radius: 15px;
+    padding: 40px;
+}
+.member_data {
+  padding-bottom: 50px;
 }
 
 .member_wrapper{
@@ -373,37 +498,9 @@ button{
 .member_wrapper p{
     padding-left: 50px;
 }
-.member_top{
-  justify-content: center;
-  width: 100%;
-  padding-bottom: 30px;
-}
-.point{
-  width: 30%;
-
-}
-.member_code{
-  width: 30%;
-
-
-}
-.member_top h2{
-  font-size: 20px;
-}
-.member_top h4{
-  font-size: 15px;
-}
-.member_top p{
-  font-size: 25px;
-  font-style: oblique;
-}
 
 
 /* 入力フォーム */
-.wrapper{
-  justify-content: center center;
-}
-
 form p{
   margin: 8px 0;
 }
@@ -421,7 +518,8 @@ form h3{
 #menu,
 #birth,
 #password,
-#password1{
+#password1,
+#getpoint{
       width: 80%; /*親要素いっぱい広げる*/
       padding: 10px 15px; /*ボックスを大きくする*/
       font-size: 16px;
@@ -429,14 +527,17 @@ form h3{
       border: 1px solid #F7FCFE; /*枠線*/
       box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
 }
-#getpoint{
-      width: 30%; /*親要素いっぱい広げる*/
-      padding: 10px 15px; /*ボックスを大きくする*/
-      font-size: 10px;
-      border-radius: 10px; /*ボックス角の丸み*/
-      border: 1px solid #F7FCFE; /*枠線*/
-      box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+
+#id_number{
+    color: black;
+    font-size: 16px;
+    width: 100%; /*flexの中で100%広げる*/
+    background-color: #ddd;
+    border: none; /*枠線非表示*/
+    outline: none; /*フォーカス時の枠線非表示*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
 }
+
 
 #kana:hover,
 #mail:hover,
@@ -455,9 +556,7 @@ form h3{
       border: 1px solid #FFF !important;
       outline: 0;
 }
-.pwreset{
-  width: 200px;
-}
+
 .error-msg,
 span {
     color: #D93A49;
@@ -472,15 +571,18 @@ span {
 .logout{
   padding: 50px 30px;
 }
+
+
 /* 管理者ページ */
 .orner-wrapper{
     background-color: black;
     color: white;
+    font-size: 25px;
     position: fixed;
   	top: 0;
   	left: 0;
     width: 100%;
-    height: 80px;
+    height: 90px;
   	margin: 0;
     font-family:monospace;
 }
@@ -492,18 +594,13 @@ span {
     display: flex;
     width: 100%;
 }
-.result_wrapper{
-    padding-top: 30px;
+.reserch-wrapper form{
+    display: flex;
+    width: 100%;
 }
 
-.result_wrapper .name{
-    padding-top: 20px;
-}
-.result_wrapper input{
-    height: 60px;
-}
 .input_field{
-    margin-right: 30px;
+    margin:  0 30px;
 }
 
 .search_bar{
@@ -521,24 +618,29 @@ span {
     color: black;
     margin-left: 5px;
 }
-
-#id_number{
-    color: black;
-    font-size: 16px;
-    width: 100%; /*flexの中で100%広げる*/
-    background-color: #ddd;
-    border: none; /*枠線非表示*/
-    outline: none; /*フォーカス時の枠線非表示*/
-    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
-}
-
 .ajax_wrapper{
     margin: 80px;
 }
-
-a .back{
-  margin-top: 30px;
+.other{
+  display: column;
+    padding-top: 50px;
+    font-size: 15px;
+    margin-bottom: 4px;
 }
+
+.back{
+  /* リンク先の下線 */
+  margin: 5px;
+  padding: 4px 0;
+ border-bottom: 2px solid #ffc0cb;
+ flex-flow: column;
+ transition: color 0.3s;
+
+}
+.back:hover{
+ color: #dc143c;
+}
+
 .styled {
    width: 90px;
     border: 0;
@@ -560,19 +662,21 @@ a .back{
 .styled:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
-
-.get {
-    border: 0;
-    line-height: 2.0;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    border-radius: 3px;
-    color: #fff;
-    background-color: #FF97C2;
-    background-image: linear-gradient(to top left, #CC0033, #CC0033 30%, rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+.result_name{
 }
-.get:hover {
+.red {
+    width: 180px;
+    color: #fff;
+    background-color: #FF97C2 !important;
+    background-image: linear-gradient(to top left, #CC0033, #CC0033 30%, rgba(0, 0, 0, 0)) !important;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6) !important;
+}
+.red:hover {
     background-color: #FF0033;
+}
+
+.under_serch{
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
 }

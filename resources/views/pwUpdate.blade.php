@@ -6,8 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/css/fixed.css">
 <link rel="stylesheet" href="/css/style.css">
+
 <!-- <link rel="stylesheet" href="/css/style.css"> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -17,10 +22,12 @@
           <h2>　パスワードを再設定しました　</h2>
                 <div class="wrapper">
                   <div>
-                    <form method="post" action="{{ route('membership') }}">
+                    <form method="post" action="{{ route('backMembership') }}">
                       @csrf
                       <input type="hidden" value="{{ $mail }}" name="mail" id="mail">
-                    <button type="submit" class="send" name="submit">会員ページへ</button>
+                      <div class="btn_wrapper">
+                        <button type="submit" class="btn" name="submit">会員ページへ</button>
+                      </div>
                   </form>
                   </div>
                 </div>

@@ -26,13 +26,13 @@
               <form action="{{ route('confirm_M') }}" method="post">
                     @csrf
                     <p>{{ $user->kana }}　さん</p>
-                    <input type="hidden" value="{{ $user->kana }}" name="kana">
+                    <input type="hidden" value="{{ $user->kana }}" name="kana" autocomplete="off">
 
-                    <input type="hidden" value="{{ $user->mail }}" name="mail">
+                    <input type="hidden" value="{{ $user->mail }}" name="mail" autocomplete="off">
 
                     <p>日時<span>*</span></p>
 
-                    <input id="date" name="date">
+                    <input id="date" name="date" autocomplete="off">
 
                     @error('date')
                       <p class="error-msg">{{ $errors->first('date') }}</p>
@@ -44,7 +44,7 @@
                     @enderror
 
 
-                    <select name="time" id="time">
+                    <select name="time" id="time" autocomplete="off">
                     @foreach ($times as $time)
                       echo '<option value="{{ $time->hour }}">{{ $time->hour }}</option>';
                     @endforeach
@@ -57,7 +57,7 @@
                       <p class="error-msg">{{ $errors->first('people') }}</p>
                     @enderror
 
-                    <select name="people" id="people">
+                    <select name="people" id="people" autocomplete="off">
                       <option value="未定">未定</option>
                       <option value="1人">1人</option>
                       <option value="2人">2人</option>
@@ -77,15 +77,14 @@
                       <p class="error-msg">{{ $errors->first('menu') }}</p>
                     @enderror
 
-                    <select name="menu" id="menu">
+                    <select name="menu" id="menu" autocomplete="off">
                     @foreach ($menus as $menu)
                       echo '<option value="{{ $menu->menu }}">{{ $menu->menu }}</option>';
                     @endforeach
-
                     </select>
 
-                    <div class="buttons">
-                      <button type="submit" class="send" name="submit" id="submit" value="send">予約確認へ</button>
+                    <div class="btn_wrapper">
+                      <button type="submit" class="btn" name="submit" id="submit" onclick="return contactCheck()">予約確認へ</button>
                     </div>
                 </form>
           </div>
