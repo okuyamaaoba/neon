@@ -37,9 +37,7 @@
     </div>
   </section>
   <section class="photo-body">
-    <div class="mozi">
-      <p>mozi<p>
-    </div>
+
     <div class="slider">
       <img src="img/slide1.jpg" alt="">
       <img src="img/slide2.jpg" alt="">

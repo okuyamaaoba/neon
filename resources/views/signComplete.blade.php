@@ -24,7 +24,7 @@
                       <input type="hidden" name="total_point" id="total_point">
 
                       <div class="btn_wrapper">
-                        <button type="submit" class="send" name="submit">会員ページへ</button>
+                        <button type="submit" class="btn" name="submit">会員ページへ</button>
                       </div>
                     </form>
                   </div>

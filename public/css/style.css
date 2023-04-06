@@ -205,7 +205,7 @@ select{
   width: inherit;
   opacity    : 0;
   animation  : slideAnime 12s ease infinite;
-  
+
 
 }
 
@@ -650,6 +650,10 @@ span {
 .ajax_wrapper{
     margin: 80px;
 }
+.ajax p{
+  padding-top: 20px;
+  font-size: 20px;
+}
 .other{
   display: column;
     padding-top: 50px;
@@ -672,6 +676,7 @@ span {
 
 .styled {
    width: 90px;
+   margin: 0 auto;
     border: 0;
     line-height: 2.0;
     padding: 0 20px;
@@ -702,6 +707,9 @@ span {
 }
 .red:hover {
     background-color: #FF0033;
+}
+.orner-bottom{
+  margin-top: 40px;
 }
 
 .under_serch{

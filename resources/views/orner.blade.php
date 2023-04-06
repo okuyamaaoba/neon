@@ -72,10 +72,13 @@
           </form>
 
         </div>
+        <div class="orner-bottom">
+          <a class="back" href="{{ route('top') }}"> Neonホームページへ </a>
+       </div>
  </div>
- <a class="border back" href="{{ route('top') }}"> Neonホームページへ </a>
-</div>
+
 </section>
+
 
 
   <!--非同期通信処理-->

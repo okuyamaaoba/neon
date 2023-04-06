@@ -54,7 +54,7 @@
             </form>
             @elseif($contact == null)
             <p>予約なし</p>
-        @endif
+            @endif
           </li>
         </section>
 

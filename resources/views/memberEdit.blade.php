@@ -22,7 +22,7 @@
     @error('kana')
       <p class="error-msg">{{ $errors->first('kana') }}</p>
     @enderror
-    <input type="text" class="input_field" name="kana" placeholder="{{ $value->kana }}"
+    <input type="text" class="input_field" name="kana" placeholder="{{ $value->kana }}" autocomplete="off"
     id="kana" value="{{ $value->kana }}">
 
 
@@ -30,7 +30,7 @@
     @error('mail')
       <p class="error-msg">{{ $errors->first('mail') }}</p>
     @enderror
-    <input type="text" class="input_field" name="mail" placeholder="{{ $value->mail }}"
+    <input type="text" class="input_field" name="mail" placeholder="{{ $value->mail }}" autocomplete="off"
     id="mail" value="{{ $value->mail }}">
 
 
@@ -38,7 +38,7 @@
     @error('birth')
       <p class="error-msg">{{ $errors->first('birth') }}</p>
     @enderror
-    <input type="text" class="input_field" name="birth" placeholder="{{ $value->birth }}"
+    <input type="text" class="input_field" name="birth" placeholder="{{ $value->birth }}" autocomplete="off"
     id="birth" value="{{ $value->birth }}">
 
 
@@ -57,7 +57,7 @@
     id="password" value="{{ $value->password }}">
 
     <input type="hidden" name="id" value="{{ $value->id }}">
-    
+
     <div class="btn_wrapper">
      <button type="submit" id="submit" class="btn" name="update">更新</button>
     </div>

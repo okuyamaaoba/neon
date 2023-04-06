@@ -33,18 +33,18 @@
                   @error('mail')
                     <p class="error-msg">{{ $errors->first('mail') }}</p>
                   @enderror
-                  <input type="text" class="input_field" name="mail"
+                  <input type="text" class="input_field" name="mail" autocomplete="off"
                   id="mail">
 
                   <p>生年月日 (例：19980101)</p>
                   @error('birth')
                     <p class="error-msg">{{ $errors->first('birth') }}</p>
                   @enderror
-                  <input type="text" class="input_field" name="birth"
+                  <input type="text" class="input_field" name="birth" autocomplete="off"
                   id="birth">
                   <div class="btn_wrapper">
-                    <button type="submit" class="btn pwreset" name="submit" onclick="return pwReset()">パスワードリセット画面へ</button>
-                  </div>    
+                    <button type="submit" class="btn pwreset" name="submit">パスワードリセット画面へ</button>
+                  </div>
                 </form>
             </div>
 

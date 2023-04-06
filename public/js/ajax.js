@@ -43,12 +43,12 @@ ajax_show.addEventListener('click', () => {
         .then(response => response.json()) // 返ってきたレスポンスをjsonで受け取って次のthenへ渡す
         .then(res => {
             console.log('res: '+res[0].id); // やりたい処理
-            document.getElementById("result1").innerHTML = "<p2 class=\"ajax\">ユーザーネーム :  " + res[0].name +"  さん</p2>";
+            document.getElementById("result1").innerHTML = "<p class=\"ajax\">ユーザーネーム :  " + res[0].name +"  さん</p>";
             document.getElementById("result2").value =  res[0].id ;
 
         })
         .catch(error => {
             console.log(error); // エラー表示
-            document.getElementById("result1").innerHTML = "<p2 class=\"ajax\">会員コードがちがいます</p2>";
+            document.getElementById("result1").innerHTML = "<p class=\"ajax\">会員コードがちがいます</p>";
         });
 });

@@ -26,7 +26,7 @@
 
                   <p>日時<span>*</span></p>
 
-                  <input id="date" name="date">
+                  <input id="date" name="date" autocomplete="off">
 
                   @error('date')
                     <p class="error-msg">{{ $errors->first('date') }}</p>

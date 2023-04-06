@@ -1,5 +1,3 @@
-<!-- ・valueの値は全変更すること！
-・form actionのsendは多分ルーティングのところ確認して！ -->
 
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
@@ -9,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/css/fixed.css">
 <link rel="stylesheet" href="/css/style.css">
-<!-- <link rel="stylesheet" href="/css/style.css"> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 

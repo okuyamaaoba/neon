@@ -257,15 +257,6 @@ class UserController extends Controller
                 return view('membership', compact('user','total_point','contact'));
             }
 
-            // public function destroy($id)
-            //     {
-            //         // Booksテーブルから指定のIDのレコード1件を取得
-            //         $contact = Contact::find($id);
-            //         // レコードを削除
-            //         $contact->delete();
-            //         // 削除したら一覧画面にリダイレクト
-            //         return redirect()->route('book.index');
-            //     }
 
 
 
@@ -299,7 +290,7 @@ class UserController extends Controller
         $user->birth = $request->birth;
         $user->password = $request->password;
         $user->timestamps = false;
-        $user->save();
+        $user->update();
 
         return view('memberUpdate',compact('mail','password'));
       }
@@ -384,7 +375,7 @@ class UserController extends Controller
         $records->timestamps = false;
         $records->save();
         session()->flush();
-        return view('getPoint');
+        return view('getpoint');
       }else{
         return redirect('orner');
       };
@@ -415,15 +406,17 @@ class UserController extends Controller
 
 
    //メールと生年月日あってたらOK、まちがっていたら画面戻る
-     public function pwReset(pwResetRequest $request){
+     public function pwReset(Request $request){
        $resetNG = null;
 
        $mail = $request->mail;
        $user = User::where('mail','=',$mail)->first();
 
-       if($request->birth == $user->birth){
+       if($request->birth === $user->birth){
+
          return view('pwReset', compact('user','resetNG'));
-       }else{
+       }
+       else if($request->birth !== $user->birth){
          $signNG = '作ってるだけ表示しない';
          return view('pwForget',compact('signNG'));
        };
@@ -455,7 +448,7 @@ class UserController extends Controller
         $user = User::where('mail','=',$mail)->first();
         $contact = Contact::where('mail','=',$mail)->first();
 
-              $records = Record::where('user_id','=',$user->id)->get();
+              $records = Record::where('mail','=',$mail)->get();
               $total_point = 0;
               foreach($records as $record){
                   $point = $record->get_point;

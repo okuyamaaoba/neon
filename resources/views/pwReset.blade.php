@@ -6,8 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/css/fixed.css">
 <link rel="stylesheet" href="/css/style.css">
-
-<!-- <link rel="stylesheet" href="/css/style.css"> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -23,7 +21,7 @@
           <p>新しいパスワードをご入力ください</p>
 
           <div class="wrapper">
-            <form action="{{ route('pwUpdate') }}" method="post" name="pwCh">
+            <form action="{{ route('pwUpdate') }}" method="post">
               @if($resetNG !== null)
                 <p class="error-msg">入力したパスワードが一致しません</p>
               @endif
@@ -46,9 +44,9 @@
                   id="password" value="{{ old('password', session('inputs.password')) }}">
 
                   <input type="hidden" value="{{ $user->mail }}" name="mail">
-                  
+
                   <div class="btn_wrapper">
-                    <button type="submit" class="btn" name="submit" id="submit" onclick="return pwChange()">パスワード変更</button>
+                    <button type="submit" class="btn" name="submit" id="submit">パスワード変更</button>
                   </div>
                 </form>
             </div>
