@@ -25,27 +25,27 @@ $member_code = substr(
 
                 @csrf
 
-              <p>名前（フルネーム）</p>
+              <p>名前（フルネーム）<span>*</span></p>
               @error('kana')
                 <p class="error-msg">{{ $errors->first('kana') }}</p>
               @enderror
               <input class="input_field" placeholder="" name="kana" id="kana"
-              value="{{ old('kana', session('inputs.kana')) }}">
+              value="{{ old('kana', session('inputs.kana')) }}" autocomplete="off">
 
 
-              <p>メールアドレス</p>
+              <p>メールアドレス<span>*</span></p>
               @error('mail')
                 <p class="error-msg">{{ $errors->first('mail') }}</p>
               @enderror
               <input class="input_field" placeholder="" name="mail" id="mail"
-              value="{{ old('mail', session('inputs.mail')) }}">
+              value="{{ old('mail', session('inputs.mail')) }}" autocomplete="off">
 
               <p>生年月日<span>*</span>(例：19980101)</p>
               @error('birth')
                 <p class="error-msg">{{ $errors->first('birth') }}</p>
               @enderror
               <input type="text" class="input_field" placeholder="" name="birth"
-              id="birth" value="{{ old('birth', session('inputs.birth')) }}">
+              id="birth" value="{{ old('birth', session('inputs.birth')) }}" autocomplete="off">
 
               <p>パスワード<span>*</span></p>
               @error('password1')

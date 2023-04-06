@@ -28,7 +28,7 @@
                     <p class="error-msg">{{ $errors->first('mail') }}</p>
                   @enderror
                   <input type="text" class="input_field" name="mail"
-                  id="mail" value="{{ old('mail', session('inputs.mail')) }}">
+                  id="mail" value="{{ old('mail', session('inputs.mail')) }}" autocomplete="off">
 
                   <p>パスワード</p>
                   @error('password')

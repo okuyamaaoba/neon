@@ -57,6 +57,7 @@
     id="password" value="{{ $value->password }}">
 
     <input type="hidden" name="id" value="{{ $value->id }}">
+    
     <div class="btn_wrapper">
      <button type="submit" id="submit" class="btn" name="update">更新</button>
     </div>

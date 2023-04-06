@@ -67,7 +67,7 @@
 
                     </select>
 
-                    <p>人数<span>*</span></p>
+                    <p>人数</p>
                     @error('people')
                       <p class="error-msg">{{ $errors->first('people') }}</p>
                     @enderror
@@ -87,7 +87,7 @@
                     </select>
 
 
-                    <p>メニュー<span>*</span></p>
+                    <p>メニュー</p>
                     @error('menu')
                       <p class="error-msg">{{ $errors->first('menu') }}</p>
                     @enderror

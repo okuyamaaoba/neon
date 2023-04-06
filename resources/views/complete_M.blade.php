@@ -27,10 +27,11 @@
                   </div>
                   </div>
               </form>
+              <div>
+                <a class="border back" href="{{ route('top') }}">トップへ戻る</a>
+              </div>
           </div>
-          <div>
-            <a class="border" href="{{ route('top') }}">トップへ戻る</a>
-          </div>
+
     </section>
 
     @include('footer')

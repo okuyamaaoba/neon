@@ -205,6 +205,7 @@ class UserController extends Controller
         return view('contact_M', compact('menus','times','user'));
       }
 
+
     //予約変更画面に遷移
       public function reserveEdit(Request $request){
         $user = User::where('mail','=',$_POST['mail'])->first();
@@ -287,8 +288,6 @@ class UserController extends Controller
 
     //会員編集完了
     public function memberUpdate(Request $request){
-      $inputs = $request->all();
-      $request->session()->put('inputs', $inputs);
 
       $mail = $request->mail;
       $password = $request->password;
@@ -304,6 +303,15 @@ class UserController extends Controller
 
         return view('memberUpdate',compact('mail','password'));
       }
+
+      // public function signConfirm(SignUpRequest $request){
+      //   //フォームから受け取ったすべてのinputの値を取得
+      //   $inputs = $request->all();
+      //   $request->session()->put('inputs', $inputs);
+      //   $member_code = $_POST['member_code'];
+      //
+      //   return view('signConfirm', compact('inputs'));
+      // }
 
 
       // public function getIndex()

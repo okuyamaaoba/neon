@@ -34,10 +34,10 @@ body{
     0 0 380px #FF0099;
 }
 
-body p {
+/* body p {
   font-size: 15px;
   padding: 10px;
-}
+} */
 section{
 width: auto
 }
@@ -53,7 +53,7 @@ li {
 
 .lead-body {
     width: 100%;
-    height: 600px;
+    height: 640px;
 }
 
 
@@ -73,7 +73,7 @@ select{
     font-size: 40px;
     font-style: italic;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 
     text-shadow:
       0 0 7px #fff,
@@ -168,31 +168,45 @@ select{
   display: none;
 }
 .photo-body{
+  display: flex;
   padding-bottom: 40px;
-  width: 30%;
   margin: 0 auto;
 }
+.mozi p{
+  border-radius: 2rem;
+  position   : absolute;
+  overflow   : hidden;
+                    /* 画像のサイズに合わせて変更ください */
+  width      : 100px;
+  height     : 100px;
+  margin     : auto;      /* サンプルは中央寄せの背景：白 */
+  background : lightgreen;
+  opacity: 0.2;
+  }
 
-.slider{
+  .slider{
+  border-radius: 2rem;
   position   : relative;
-overflow   : hidden;
-                  /* 画像のサイズに合わせて変更ください */
-width      : 200px;
-height     : 200px;
-margin     : auto;      /* サンプルは中央寄せの背景：白 */
-background : #fff;
+  overflow   : hidden;
+                    /* 画像のサイズに合わせて変更ください */
+  width      : 400px;
+  height     : 300px;
+  margin     : auto;      /* サンプルは中央寄せの背景：白 */
+  background : #fff;
 
-
-}
+  }
 .slider img {
+  border-radius: 2rem;
+
   position: absolute;
-  width: 100%;
   display    : block;
                       /* 画像のサイズを表示エリアに合せる */
   height     : inherit;
-  weight: inherit;
+  width: inherit;
   opacity    : 0;
   animation  : slideAnime 12s ease infinite;
+  
+
 }
 
  /*=== スライドのアニメーションを段差で開始する ========= */
@@ -326,7 +340,21 @@ background : #fff;
 }
 .btn_wrapper button{
   width: 30%;
-
+}
+.btn1_wrapper{
+  display: flex;
+  flex-flow: column;
+ padding-top: 30px;
+}
+.btn1{
+  padding: 2px;
+  margin: 2px;
+  color: brack;
+  background-color: white;
+}
+.btn1:hover{
+  color: blue;
+  background-color: #e6e6fa;
 }
 .btn{
   /* 青ボタンCSS */
@@ -432,6 +460,7 @@ background : #fff;
   font-size: 25px;
   font-style: oblique;
   margin: 0 auto;
+  padding-top: 60px;
 }
 
 .member_top h5{

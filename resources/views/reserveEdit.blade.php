@@ -79,7 +79,7 @@
                   </select>
 
                   <div class="btn_wrapper">
-                    <button type="submit" class="btn" name="submit" id="submit" onclick="return confirm('変更してもよろしいですか？')">予約変更するへ</button>
+                    <button type="submit" class="btn" name="submit" id="submit" onclick="return confirm('変更してもよろしいですか？')">予約変更する</button>
                   </div>
               </form>
               <script src="/js/main.js"></script>

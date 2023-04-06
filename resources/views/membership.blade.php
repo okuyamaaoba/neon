@@ -43,10 +43,14 @@
               <input type="hidden" value="{{ $contact->menu }}" name="menu">
 
               <input type="hidden" value="{{ $user->mail }}" name="mail">
+              <input type="hidden" value="{{ $user->id }}" name="id">
 
 
-              <button type="submit" class="reserve_info" formaction="{{ route('reserveEdit') }}" >予約変更</button>
-              <button type="submit" class="reserve_info" formaction="{{ route('delete') }}" onclick="return confirm('予約をキャンセルしますか？')">予約キャンセル</button>
+              <div class="btn1_wrapper">
+                <button type="submit" class="btn1" formaction="{{ route('reserveEdit') }}" >予約変更</button>
+                <button type="submit" class="btn1" formaction="{{ route('delete') }}" onclick="return confirm('予約をキャンセルしますか？')">予約キャンセル</button>
+              </div>
+
             </form>
             @elseif($contact == null)
             <p>予約なし</p>
